@@ -1,4 +1,5 @@
 import {curry} from 'lodash/fp';
+import {compose2} from './Combinators';
 
 export const mkObservable = model =>
     ({observers: [], _model: model});
@@ -12,6 +13,8 @@ export const notify = (observable) => {
     return observable;
 };
 
-export const fmap = curry((f, {observers, _model}) => notify({observers, _model: f(_model)}));
+export const fmap = curry((f, {observers, _model}) => ({observers, _model: f(_model)}));
+
+export const fmapAndNotify = compose2(notify, fmap);
 
 export const getModel = ({_model}) => _model;

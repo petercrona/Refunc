@@ -3,8 +3,8 @@ import * as Model from './Model';
 import * as Observable from '../Refunc/Observable';
 import {observe} from '../Refunc/ObserveHoc';
 
-const inc = Observable.fmap(Model.inc);
-const dec = Observable.fmap(Model.dec);
+const inc = Observable.fmapAndNotify(Model.inc);
+const dec = Observable.fmapAndNotify(Model.dec);
 
 function Counter({model, observable}) {
     return (
