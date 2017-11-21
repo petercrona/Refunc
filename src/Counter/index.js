@@ -2,7 +2,6 @@ import React from 'react';
 import * as Model from './Model';
 import {dec, inc} from './Model';
 import {observe} from '../Refunc/ObserveHoc';
-import * as Observable from '../Refunc/Observable';
 
 function Counter({refunc: {model, notify, handle}}) {
     return (
