@@ -1,20 +1,18 @@
 import React from 'react';
 import * as Model from './Model';
-import * as Observable from '../Refunc/Observable';
+import {dec, inc} from './Model';
 import {observe} from '../Refunc/ObserveHoc';
+import * as Observable from '../Refunc/Observable';
 
-const inc = Observable.fmapAndNotify(Model.inc);
-const dec = Observable.fmapAndNotify(Model.dec);
-
-function Counter({model, observable}) {
+function Counter({refunc: {model, notify, handle}}) {
     return (
         <div>
             <p>
                 <strong>Counter is {model.counter}</strong>
             </p>
             <p>
-                <button onClick={() => dec(observable)}>Decrement</button>
-                <button onClick={() => inc(observable)}>Increment</button>
+                <button onClick={notify(dec)}>Decrement</button>
+                <button onClick={notify(inc)}>Increment</button>
             </p>
         </div>
     );
