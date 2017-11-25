@@ -11,7 +11,7 @@ function TicTacToe({refunc}) {
 
     return (
         <div>
-            <GameStatus model={refunc.model} />
+            <GameStatus model={model} />
 
             <ul className="TicTacToe_board">
                 {map(
