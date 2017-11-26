@@ -1,9 +1,9 @@
 # Mvsplit
 Make your models observable. Nothing more nothing less. However, the interesting part of Mvsplit
-lies in how it is done. It's using the functor concept from functional programming to achieve this.
+lies in how this is done. It's using the functor concept from functional programming to achieve this.
 
 Mvsplit allows you to wrap your model, and then lift your normal functions to operate on your wrapped
-model. This means that you functions stay completely ignorant of any observable magic.
+model. This means that your functions stay completely ignorant of all the observable magic.
 Let's have a look:
 
 ``` JavaScript
@@ -30,8 +30,10 @@ notify(newObservable); // "value is 1" will be logged.
 
 If you look at the above example and get scared or confused, don't worry!
 This is the core code, it is not how you are intended to use it.
-Have a look at the React examples for how it is used in real life.
-It's pretty fancy!
+Just notice that the three lines that make up the model are very simple and ignorant
+of any observable behavior.
+
+Have a look at the React examples for how it is used in real life. It's pretty fancy!
 
 To sum up, Mvsplit allows you to make your models observable. But while coding your
 models, you can completely ignore that they are observable. No need to mess with state.
