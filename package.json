@@ -1,11 +1,17 @@
 {
-  "name": "mvsplit",
-  "version": "0.1.0",
-  "private": false,
-  "devDependencies": {
-  },
-  "dependencies": {
-  },
-  "scripts": {
-  }
+    "name": "mvsplit",
+    "version": "0.2.0",
+    "main": "dist/index.js",
+    "devDependencies": {
+        "@babel/cli": "^7.0.0-beta.32",
+        "@babel/core": "^7.0.0-beta.32",
+        "@babel/preset-env": "^7.0.0-beta.32",
+        "babel-minify": "^0.2.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0"
+    },
+    "dependencies": {},
+    "scripts": {
+        "build": "./node_modules/.bin/babel src/index.js | ./node_modules/.bin/minify > dist/index.js"
+    },
+    "browserslist": "last 2 versions, ie 10"
 }
