@@ -1,5 +1,5 @@
 {
-    "name": "mvsplit",
+    "name": "mvstate",
     "version": "0.2.0",
     "main": "dist/index.js",
     "devDependencies": {
