@@ -19,6 +19,7 @@ const notify = (observable) => {
 };
 
 const fmap = curry((f, {observers, _model}) => ({observers, _model: f(_model)}));
+const fmap2 = curry((f, {observers, _model}, x) => ({observers, _model: f(x, _model)}));
 
 const getModel = ({_model}) => _model;
 
@@ -27,5 +28,6 @@ module.exports = {
     observe,
     notify,
     fmap,
+    fmap2,
     getModel
 };
