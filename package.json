@@ -1,6 +1,6 @@
 {
-    "name": "mvstate",
-    "version": "0.1.1",
+    "name": "localstate",
+    "version": "0.1.0",
     "main": "dist/index.js",
     "devDependencies": {
         "@babel/cli": "^7.0.0-beta.32",
