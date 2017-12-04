@@ -1,8 +1,8 @@
-# Mvstate
-Make your models observable. Nothing more nothing less. However, the interesting part of Mvstate
+# Localstate
+Make your models observable. Nothing more nothing less. However, the interesting part of Localstate
 lies in how this is done. It's using the functor concept from functional programming to achieve this.
 
-Mvstate allows you to wrap your model, and then lift your normal functions to operate on your wrapped
+Localstate allows you to wrap your model, and then lift your normal functions to operate on your wrapped
 model. This means that your functions stay completely ignorant of all the observable magic.
 Let's have a look:
 
@@ -35,10 +35,10 @@ of any observable behavior.
 
 Have a look at the React examples for how it is used in real life. It's pretty fancy!
 
-To sum up, Mvstate allows you to make your models observable. But while coding your
+To sum up, Localstate allows you to make your models observable. But while coding your
 models, you can completely ignore that they are observable. No need to mess with state.
 No need to keep track of a list of observers. Just code your elegant pure code
-operating on immutable models. Mvstate isn't solving a hard problem, but it can help you produce
+operating on immutable models. Localstate isn't solving a hard problem, but it can help you produce
 better and more maintainable code. Try it out and join me in the quest of raising the quality
 of code!
 
